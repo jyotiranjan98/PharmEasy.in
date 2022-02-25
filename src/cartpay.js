@@ -176,22 +176,7 @@ function app(arr) {
     console.log(document.getElementById(`sel${x}`));
     div.setAttribute("class", "qtycard");
     div.setAttribute("id", `card${x}`);
-    // let name = document.createElement("h3");
-    // name.innerHTML = `${arr[x].taga}`;
-
-    // let company = document.createElement("h5");
-    // company.innerHTML = `${arr[x].company}`;
-    // let url = document.createElement("img");
-    // url.src = arr[x].imag;
-
-    // let mrp = document.createElement("h3");
-    // mrp.innerHTML = `${arr[x].mrp}`;
-    // let off = document.createElement("h3");
-    // off.innerHTML = `${arr[x].off}`;
-    // let pri = document.createElement("h3");
-    // pri.innerHTML = `${arr[x].pri}`;
-
-    // div.append(url, company, mrp, off, pri);
+    
     car.append(div);
   }
 }
@@ -202,7 +187,7 @@ function dele(x) {
   let arr = JSON.parse(localStorage.getItem("pharmcart"));
   console.log(arr[x]);
 
-  //sum -= arr[x].pri * arr[x].qty;
+  
   console.log(sum);
   if (sum > 500) {
     del = 0;
@@ -223,8 +208,8 @@ function dele(x) {
   localStorage.setItem("pharmcart", JSON.stringify(arr));
   if (arr.length == 0) {
     localStorage.removeItem("pharmcart");
-    // }
-    // if (arr.length == null) {
+    
+    
     console.log("its comin");
     let car = document.getElementById("carter");
     car.innerHTML = `<div class="cart_box">
@@ -300,12 +285,12 @@ function selectme(x) {
   localStorage.setItem("pharmcart", JSON.stringify(arr));
 }
 
-// Apply Coupons Here
+
 let coop = 0;
 function appli() {
-  //console.log("Hey ma");
+  
   let coup = document.getElementById("coup").value;
-  //console.log(coup);
+  
   let div = document.createElement("div");
 
   let fin = document
