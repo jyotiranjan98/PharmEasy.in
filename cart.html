@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      PharmEasy: Online Pharmacy & Medical Store in India | 5M+ ... pharmeasy.in
+    </title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles/landingpage.css" />
+    <link rel="stylesheet" href="./styles/cart.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/cartitem.css" />
+  </head>
+
+  <body>
+    <div class="navbar"></div>
+
+    <div style="margin-left: 250px"><h1>Cart</h1></div>
+
+    <!-- empty cart starts here -->
+
+    <div id="carter">
+      <div id="cont"></div>
+      <div id="butcont"></div>
+    </div>
+
+    <!-- footer starts here -->
+ <div class="footer"></div>
+ 
+  </body>
+</html>
+<script src="./src/cartpay.js"></script>
+<script src="./src/login.js"></script>
+<script src="./src/signup.js"></script>
+<script src="./src/pincode.js"></script>
+
+
+<script type="module">
+  import navbar from "./component/navbar.js"
+  import footer from "./component/footer.js"
+
+  let x = document.querySelector(".navbar")
+  x.innerHTML = navbar()
+
+  let y = document.querySelector(".footer")
+  y.innerHTML = footer()
+
+</script>

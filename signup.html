@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIGNUP PAGE</title>
+    <link rel="shortcut icon" href="https://media-fastly.hackerearth.com/media/companies/eb758a9-11138075_1568416943423907_5873572001696559736_n.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/landingpage.css" />
+    <link rel="stylesheet" href="./styles/signup.css" />
+    <link rel="stylesheet" href="./styles/Order_cancel.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+  </head>
+
+  <body>
+
+    <div class="navbar"></div>
+
+    <!-- ending header -->
+    <div class="pay_main">
+      <div id="whole">
+        <div class="name1">
+          <p>U</p>
+        </div>
+        <div class="plusimg">
+          <img
+            src="https://assets.pharmeasy.in/web-assets/dist/3864b471.svg"
+            alt="plus"
+          />
+
+          <p>
+            Save flat 50% extra on medicine & enjoy FREE delivery with PLUS
+            membership
+          </p>
+        </div>
+        <div id="left_box">
+          <div class="bag">
+            <img
+              src="https://assets.pharmeasy.in/web-assets/dist/6d757b2d.svg"
+              alt="bag"
+            />
+            <div class="bag_p">
+              <p onclick="showord()">YOUR ORDER</p>
+              <p>Medicine/Healthcare</p>
+              <p>Diagnostic</p>
+            </div>
+          </div>
+          <div class="bag">
+            <img
+              src="https://assets.pharmeasy.in/web-assets/dist/6d757b2d.svg"
+              alt="bag"
+            />
+            <div class="bag_p">
+              <p>REFILLS</p>
+              <p>Active</p>
+              <p>Inactive</p>
+            </div>
+          </div>
+          <div class="bag">
+            <img
+              src="https://assets.pharmeasy.in/web-assets/dist/5673272f.svg"
+              alt="file"
+            />
+            <div class="bag_p">
+              <p>MEDICAL RECORDS</p>
+              <p>All</p>
+            </div>
+          </div>
+          <div class="bag">
+            <img
+              src="https://assets.pharmeasy.in/web-assets/dist/a2995809.svg"
+              alt="profile"
+            />
+            <div class="bag_p">
+              <p>PROFILE SETTINGS</p>
+              <p>Edit Profile</p>
+              <p>Manage patients</p>
+              <p onclick="address()">Manage Address</p>
+              <p>Manage Refunds</p>
+            </div>
+          </div>
+          <div class="bag">
+            <img
+              src="https://assets.pharmeasy.in/web-assets/dist/ab7afe51.svg"
+              alt="wallet"
+            />
+            <div class="bag_p">
+              <p>wallet</p>
+            </div>
+          </div>
+          <div class="bag">
+            <img
+              src="https://assets.pharmeasy.in/web-assets/dist/319c59f0.svg"
+              alt="earn"
+            />
+            <div class="bag_p">
+              <p>Refer & Earn</p>
+            </div>
+          </div>
+          <div class="bag">
+            <img
+              src="https://assets.pharmeasy.in/web-assets/dist/9a22e94b.svg"
+              alt="log"
+            />
+            <div class="bag_p" onclick="logout()">
+              <p>Log Out</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="right_1">
+        <div class="name" id="editme">Edit Profile</div>
+        <div class="edit_part" id="showall">
+          <div class="entry">
+            Name<span>*</span>
+            <br />
+            <input
+              type="text"
+              placeholder="Enter Your Name Here"
+              id="username"
+            />
+          </div>
+          <div class="entry">
+            Mobile Number<span>*</span>
+            <br />
+            <input placeholder="Hello" id="mobile" disabled />
+          </div>
+          <div class="sub_for_offer">
+            <h4>Subscribe for offers!</h4>
+            <img
+              src="https://assets.pharmeasy.in/web-assets/dist/746d1853.svg?dim=0x45&dpr=0.8533333539962769&q=100"
+            />
+
+            <input type="text" placeholder="Enter Your Email" id="email" />
+            <br />
+            <button onclick="sub()" type="submit">Subscribe</button>
+          </div>
+          <button type="submit" onclick="savesess()" id="save">save</button>
+        </div>
+        <div id="address1"></div>
+      </div>
+    </div>
+    <!-- footer -->
+    <hr />
+    <div class="footer"></div>
+  </body>
+</html>
+<script src="./src/login.js"></script>
+<script src="./src/signup.js"></script>
+<script src="./src/pincode.js"></script>
+<script>
+  let mob = document.getElementById("mobile");
+  console.log(mob);
+
+  mob.placeholder = session[0].num;
+  let use1 = document.getElementById("username");
+  console.log(use1);
+  if (session[0].user == undefined) {
+    use1.placeholder = "Enter Your Name";
+  } else {
+    use1.placeholder = session[0].user;
+  }
+</script>
+
+<script type="module">
+  import navbar from "./component/navbar.js"
+  import footer from "./component/footer.js"
+
+  let x = document.querySelector(".navbar")
+  x.innerHTML = navbar()
+
+  let y = document.querySelector(".footer")
+  y.innerHTML = footer()
+
+</script>
